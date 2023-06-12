@@ -849,7 +849,7 @@ elif authentication_status:
                             if str(dados_colab[rang][28]) != '1':
                                 st.error("Avaliação ainda não preenchida.")
                             else:
-                                st.subheader("Reinicializar o preenchimento da Avaliação")
+                                st.subheader("Renicializar o preenchimento da Avaliação")
                                 botao_renecializ = st.button('Renecializar', key=f'Renecializar {rang}')
                                 
                                 if botao_renecializ:
