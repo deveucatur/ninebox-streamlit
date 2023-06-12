@@ -33,7 +33,6 @@ mycursor = conexao.cursor()
 sql = 'SELECT * FROM Colaboradores;'
 mycursor.execute(sql)
 listDados2 = mycursor.fetchall()
-mycursor.close()
 
 
 def progress_bar(percentual,titulo):
@@ -258,11 +257,9 @@ def novos_compromissos(listDados2, linhaBD, number_random, tipo_proc):
     submitted3 = st.form_submit_button("Registrar Compromisso")
     if submitted3:
       sql = f'INSERT INTO compromissos_9box (matricula, nome, comport_melhorar, plano_acao, recuro_necessar, resultado_previst, data_inicio, data_fim, check_conclui, area_melhorar) VALUES ({listDados2[linhaBD][0]}, "{listDados2[linhaBD][1]}", "{Comportamento}", "{plano}", "{recursos}", "{resultado}", "{data_inicio}", "{data_fim}", "{check_compr}", "{area}");'
-      mycursor = conexao.cursor()
       mycursor.execute(sql)
       conexao.commit()
       st.success('Registro do colaborador encaminhado.')   
-      mycursor.close()
     
 
 def visualizaçao_processos(listDados2, linhaBD):
@@ -772,7 +769,6 @@ def visualizacao_Compromissos(listDados2, linhaBD, matricula):
         mycursor = conexao.cursor()
         mycursor.execute(comandBDCheck)
         conexao.commit()
-      mycursor.close() 
 
 
 def visualizacao_CPA(listDados2, linhaBD, medDes, medComp):
