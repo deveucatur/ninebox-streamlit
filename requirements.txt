@@ -1,0 +1,10 @@
+matplotlib
+pandas
+Pillow
+streamlit
+openpyxl
+streamlit-authenticator
+plotly
+numpy
+emoji
+pymysql
