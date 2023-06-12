@@ -6,9 +6,9 @@ from datetime import datetime
 from datetime import date
 from dateutil.relativedelta import relativedelta
 from util import soma_basica
-import pymysql
+import mysql.connector
 
-conexao = pymysql.connect(
+conexao = mysql.connector.connect(
     passwd='npmyY8%UZ041',
     port=3306,
     user='ninebox',
