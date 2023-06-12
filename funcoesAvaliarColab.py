@@ -11,10 +11,10 @@ import mysql.connector
 
 
 conexao = mysql.connector.connect(
-    passwd='npmyY8%UZ041',
+    passwd='nineboxeucatur',
     port=3306,
     user='ninebox',
-    host='192.168.10.71',
+    host='nineboxeucatur.c7rugjkck183.sa-east-1.rds.amazonaws.com',
     database='Colaboradores'
 )
 mycursor = conexao.cursor('')
