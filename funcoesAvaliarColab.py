@@ -8,6 +8,8 @@ from dateutil.relativedelta import relativedelta
 from util import soma_basica
 import mysql.connector
 
+
+
 conexao = mysql.connector.connect(
     passwd='npmyY8%UZ041',
     port=3306,
@@ -15,6 +17,7 @@ conexao = mysql.connector.connect(
     host='192.168.10.71',
     database='Colaboradores'
 )
+mycursor = conexao.cursor('')
 
 
 def limpar_nameindicador_bd(name_indicador):
@@ -165,10 +168,8 @@ def FuncaoProcessos(dados_colab, rang, codAce):
                 colunas = ["N_IPROC", "M_IPROC", "D_IPROC", "P_IPROC", "DPROC_Check"]
                 for i in range(len(colunas)):
                     sql = f'UPDATE Colaboradores SET {colunas[i]} = "{linrow[i]}"  WHERE CódAce = {int(codAce)}'
-                    mycursor = conexao.cursor()
                     mycursor.execute(sql)
                     conexao.commit()
-                mycursor.close()
                 st.success('Registro realizado')
 
 
@@ -231,10 +232,8 @@ def FuncaoProcediment(dados_colab, rang, codAce):
             colunas = ["Procedimento", "hrs_procedim", "Check_proced"]
             for i in range(len(colunas)):
                 sql = f'UPDATE Colaboradores SET {colunas[i]} =  "{linrow[i]}"  WHERE CódAce = {int(codAce)}'
-                mycursor = conexao.cursor()
                 mycursor.execute(sql)
                 conexao.commit()
-            mycursor.close()
             st.success('Registro realizado')
         
 
@@ -349,11 +348,9 @@ def FuncaoProjetos(dados_colab, rang, codAce):
                 linrow = [L_ind, L_met, L_Des, L_Pol, 1, lista_projetos, lista_horas]
                 colunas = ["N_IPROJ", "M_IPROJ", "D_IPROJ", "P_IPROJ", "DPROJ_Check", "NAME_PROJ", "HORAS_PROJ"]
                 for i in range(len(colunas)):
-                    mycursor = conexao.cursor()
                     sql = f'UPDATE Colaboradores SET {colunas[i]} = "{linrow[i]}"  WHERE CódAce = {int(codAce)}'
                     mycursor.execute(sql)
                     conexao.commit()
-                mycursor.close()
                 st.success('Registro do colaborador encaminhado.')
 
 
@@ -385,10 +382,8 @@ def FuncaoPesosBSC(codA, rang):
                 coluna = ['BSC_Peso_Compr', 'BSC_Peso_Proces', 'BSC_Peso_Proj', 'BSC_check']
                 for a in range(len(pesos)):    
                     comando = f'UPDATE Colaboradores SET {coluna[a]} = "{pesos[a]}"  WHERE CódAce = {int(codA)}'
-                    mycursor = conexao.cursor()
                     mycursor.execute(comando)
                     conexao.commit()
-                mycursor.close()
                 st.success('Informações armazenadas com sucesso')
 
 
@@ -429,11 +424,9 @@ def FuncaoCPA(codA, rang, dados_colab):
             lista_valores.append(1)
             submittedCPA = st.form_submit_button("Registrar CPA")
             if submittedCPA: 
-                mycursor = conexao.cursor()
                 for a in range(len(lista_valores)):
                     coluna = ['CPA_Perfil', 'CPA_Capacit', 'CPA_Atitude', 'CPA_Check']
                     comando = f'UPDATE Colaboradores SET {coluna[a]} = "{lista_valores[a]}"  WHERE CódAce = {int(codA)}'
                     mycursor.execute(comando)
                     conexao.commit()
-                mycursor.close()
                 st.success('Informações armazenadas com sucesso')  
