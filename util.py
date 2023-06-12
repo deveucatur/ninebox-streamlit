@@ -10,10 +10,10 @@ from openpyxl import load_workbook
 import ast
 import datetime
 from datetime import datetime
-import pymysql
+import mysql.connector
 
 def mycursor():
-    conexao = pymysql.connect(
+    conexao = mysql.connector.connect(
     passwd='nineboxeucatur',
     port=3306,
     user='ninebox',
@@ -847,7 +847,7 @@ def listaCompNon0(data, categories):
     return [[lisaux1[x][y][0] for x in range(len(lisaux1))] for y in range(len(lisaux1[0]))], \
            [[lisaux1[x][y][1] for x in range(len(lisaux1))] for y in range(1)][0]
 
-conexao = pymysql.connect(
+conexao = mysql.connector.connect(
     passwd='nineboxeucatur',
     port=3306,
     user='ninebox',
