@@ -766,7 +766,6 @@ def visualizacao_Compromissos(listDados2, linhaBD, matricula):
       
       for a in range(len(check_db)):    
         comandBDCheck = f'UPDATE compromissos_9box SET check_conclui = "{check_db[a]}" WHERE (matricula = {matricula}) AND (comport_melhorar = "{comp_compt[a]}");'
-        mycursor = conexao.cursor()
         mycursor.execute(comandBDCheck)
         conexao.commit()
 
