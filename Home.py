@@ -139,26 +139,26 @@ elif authentication_status:
     with col1:
       st.write("")
       nomeBotão = "Dashboard"
-      link = "https://9box.eucatur.com.br/Dashboard_Administrativo"
+      link = "https://nineboxeucatur.streamlit.app/Dashboard_Administrativo"
       image_url=  "https://cdn-icons-png.flaticon.com/512/5601/5601970.png"
       botão1(nomeBotão,link,image_url)
 
       st.write("")
       nomeBotão = "Adicionar usuários"
-      link = "https://9box.eucatur.com.br/Novo_Usu%C3%A1rio"
+      link = "https://nineboxeucatur.streamlit.app/Novo_Usu%C3%A1rio"
       image_url=  "https://cdn-icons-png.flaticon.com/512/8695/8695106.png"
       botão1(nomeBotão,link,image_url)
 
     with col2:
       st.write("")
       nomeBotão = "Nova Avaliação"
-      link = "https://9box.eucatur.com.br/Nova_Avalia%C3%A7%C3%A3o"
+      link = "https://nineboxeucatur.streamlit.app/Nova_Avalia%C3%A7%C3%A3o"
       image_url=  "https://cdn-icons-png.flaticon.com/512/8528/8528054.png"
       botão1(nomeBotão,link,image_url)
 
       st.write("")
       nomeBotão = "Avaliar colaborador"
-      link = "https://9box.eucatur.com.br/Avaliar_Colaborador"
+      link = "https://nineboxeucatur.streamlit.app/Avaliar_Colaborador"
       image_url= "https://cdn-icons-png.flaticon.com/512/8527/8527991.png"
       botão1(nomeBotão,link,image_url)
 
@@ -166,12 +166,12 @@ elif authentication_status:
     with col3:
       st.write("")
       nomeBotão = "Relatório Funcional"
-      link = "https://9box.eucatur.com.br/Relat%C3%B3rio_Funcional"
+      link = "https://nineboxeucatur.streamlit.app/Relat%C3%B3rio_Funcional"
       image_url="https://cdn-icons-png.flaticon.com/512/8528/8528025.png"
       botão1(nomeBotão,link,image_url)
       
       st.write("")
       nomeBotão = 'PDI'
-      link = 'https://9box.eucatur.com.br/PDI'
+      link = 'https://nineboxeucatur.streamlit.app/PDI'
       image_url="https://cdn-icons-png.flaticon.com/512/4625/4625458.png"
       botão1(nomeBotão,link,image_url)
