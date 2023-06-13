@@ -158,7 +158,7 @@ elif authentication_status:
                                 
                                 ----------------------------------------------------------------
 
-                                https://9box-cadastro.eucatur.com.br/
+                                https://cadastro-9box.streamlit.app/
 
                                 ----------------------------------------------------------------
 
